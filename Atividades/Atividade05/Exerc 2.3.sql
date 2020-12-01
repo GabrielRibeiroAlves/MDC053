@@ -16,16 +16,3 @@ CREATE TABLE FUNCIONARIO (
                 Parent_matricula_1 INT NOT NULL,
                 PRIMARY KEY (matricula, codigo)
 );
-
-
-ALTER TABLE FUNCIONARIO ADD CONSTRAINT departamento_funcionario_fk
-FOREIGN KEY (codigo)
-REFERENCES DEPARTAMENTO (codigo)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
-
-ALTER TABLE FUNCIONARIO ADD CONSTRAINT funcionario_funcionario_fk1
-FOREIGN KEY (Parent_matricula_1)
-REFERENCES FUNCIONARIO (matricula)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
