@@ -33,22 +33,3 @@ CREATE TABLE Turma (
                 data_matricula DATE NOT NULL,
                 PRIMARY KEY (id_turma_, id_aluno, id_curso, id_professor)
 );
-
-
-ALTER TABLE Turma ADD CONSTRAINT aluno_turma_fk
-FOREIGN KEY (id_aluno)
-REFERENCES ALUNO (id_aluno)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
-
-ALTER TABLE Turma ADD CONSTRAINT professor_turma_fk
-FOREIGN KEY (id_professor)
-REFERENCES PROFESSOR (id_professor)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
-
-ALTER TABLE Turma ADD CONSTRAINT curso_turma_fk
-FOREIGN KEY (id_curso)
-REFERENCES Curso (id_curso)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
