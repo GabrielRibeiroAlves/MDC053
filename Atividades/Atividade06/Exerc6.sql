@@ -1,4 +1,3 @@
-
 --  V.
   insert into turma(id_turma, num_periodo, id_professor) VALUES(3, 20201, 3);
 --  ERROR: Key (id_professor)=(3) is not present in table "professor".
